@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>定位和居中</title>
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .empty {
+            float:left;
+            height: 50%;
+            margin-bottom: -100px;
+        }
+        .outer {
+            clear: both;
+            position:relative;
+            height: 200px;
+            /*line-height: 200px;*/
+            width: 400px;
+            margin-left: auto;
+            margin-right: auto;
+            z-index: 1;
+            background-color: grey;
+            /*top: 50%;
+            left: 50%;*/
+        }
+        .circle1 {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background-color:yellow;
+            -moz-border-radius: 0 0 50px 0;
+            -webkit-border-radius: 0 0 50px 0;
+            border-radius: 0 0 50px 0;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .circle2 {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            background-color:yellow;
+            -moz-border-radius: 50 0 0 0;
+            -webkit-border-radius: 50px 0 0 0;
+            border-radius: 50px 0 0 0;
+            bottom: 0;
+            right: 0;
+            z-index: 2;
+        }
+    </style>
+</head>
+<body>
+    <div class="empty"></div>
+    <div class='outer'>
+        <div class="circle1"></div>
+        <dic class="circle2"></dic>
+    </div>
+</body>
+</html>
